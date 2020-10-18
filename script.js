@@ -40,6 +40,11 @@ function openMenu(evt, menuName) {
     threshhold: 1,
     rootMargin: "300px"
   };
+  const mobileOptions={
+    root: null,//it is the viewport
+    threshhold: 0.1,
+    rootMargin: "0px"
+  };
 const dissapearOnScroolL = new IntersectionObserver(function(entries,dissapearOnScroolL)
 {
   entries.forEach(entry => {
@@ -63,6 +68,7 @@ const dissapearOnScroolR = new IntersectionObserver(function(entries,dissapearOn
     }
   })
 },options);
+
 const showTab = new IntersectionObserver(function(entries,showTab)
 {
   entries.forEach(entry => {
@@ -75,6 +81,42 @@ const showTab = new IntersectionObserver(function(entries,showTab)
   })
 },options2);
 
-  dissapearOnScroolL.observe(leftAnimation);
-  dissapearOnScroolR.observe(rightAnimation);
-  showTab.observe(menuTab);
+const dissapearOnScroolRM = new IntersectionObserver(function(entries,dissapearOnScroolRM)
+{
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('right-animation');
+      dissapearOnScrool.unobserve(entry.target);
+    }
+  })
+},mobileOptions);
+const dissapearOnScroolLM = new IntersectionObserver(function(entries,dissapearOnScroolLM)
+{
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('left-animation');
+      dissapearOnScrool.unobserve(entry.target);
+    }
+  })
+},mobileOptions);
+
+var x = window.matchMedia("(max-width: 600px)")
+function checkMobile(x) {
+  if (x.matches) { // If media query matches
+    dissapearOnScroolLM.observe(leftAnimation);
+    dissapearOnScroolRM.observe(rightAnimation);
+    showTab.observe(menuTab);
+  } else {
+    dissapearOnScroolL.observe(leftAnimation);
+    dissapearOnScroolR.observe(rightAnimation);
+    showTab.observe(menuTab);
+  }
+}
+
+  checkMobile(x);
+
+

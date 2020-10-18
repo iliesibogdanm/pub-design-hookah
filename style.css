@@ -542,6 +542,13 @@ body{
         width: 200px;
         left:5%;
     }
+    .cloud-animation>.left{
+        width: 2400px;
+    }
+    .cloud-animation>.right{
+        width: 2400px;
+    }
+
 }
   
 /*--------------------------------------Contact page----------------------------------------------------*/
