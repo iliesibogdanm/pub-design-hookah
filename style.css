@@ -354,14 +354,14 @@ body{
 .cloud-animation>.left{
     position: absolute;
     width: 2200px;
-    transition: all 2.5s ease-in-out;
+    transition: all 3s ease-in-out;
     left: -10%;
 }
 
 .cloud-animation>.right{
     position: relative;
     width: 2200px;
-    transition: all 2.5s ease-in-out;
+    transition: all 3s ease-in-out;
     left: 10%;
     top: -100px;
 }

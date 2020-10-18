@@ -42,8 +42,8 @@ function openMenu(evt, menuName) {
   };
   const mobileOptions={
     root: null,//it is the viewport
-    threshhold: 0.1,
-    rootMargin: "0px"
+    threshhold: 0.4,
+    rootMargin: "200px"
   };
 const dissapearOnScroolL = new IntersectionObserver(function(entries,dissapearOnScroolL)
 {
@@ -116,7 +116,6 @@ function checkMobile(x) {
     showTab.observe(menuTab);
   }
 }
-
   checkMobile(x);
 
 
