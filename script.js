@@ -29,6 +29,8 @@ function openMenu(evt, menuName) {
   const leftAnimation = document.querySelector(".left")
   const rightAnimation = document.querySelector(".right")
   const menuTab = document.querySelector(".tab")
+  const toFade = document.querySelectorAll('.headings')
+  const toSlide = document.querySelectorAll('.sliders')
 
   const options={
     root: null,//it is the viewport
@@ -39,6 +41,11 @@ function openMenu(evt, menuName) {
     root: null,//it is the viewport
     threshhold: 1,
     rootMargin: "300px"
+  };
+  const fadeOptions={
+    root: null,//it is the viewport
+    threshhold: 0.7,
+    rootMargin: "0px"
   };
   const mobileOptions={
     root: null,//it is the viewport
@@ -92,6 +99,7 @@ const dissapearOnScroolRM = new IntersectionObserver(function(entries,dissapearO
     }
   })
 },mobileOptions);
+
 const dissapearOnScroolLM = new IntersectionObserver(function(entries,dissapearOnScroolLM)
 {
   entries.forEach(entry => {
@@ -103,6 +111,34 @@ const dissapearOnScroolLM = new IntersectionObserver(function(entries,dissapearO
     }
   })
 },mobileOptions);
+
+const fadeInOnScrool = new IntersectionObserver(function(entries,fadeInOnScrool)
+{
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('animate__animated','animate__lightSpeedInRight');
+    }
+  })
+},fadeOptions);
+toFade.forEach(h1 => {
+  fadeInOnScrool.observe(h1)
+})
+
+const sladeInOnScrool = new IntersectionObserver(function(entries,sladeInOnScrool)
+{
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      return;
+    } else {
+      entry.target.classList.add('animate__animated','animate__backInLeft');
+    }
+  })
+},fadeOptions);
+toSlide.forEach(p => {
+  sladeInOnScrool.observe(p)
+})
 
 var x = window.matchMedia("(max-width: 600px)")
 function checkMobile(x) {
@@ -118,5 +154,3 @@ function checkMobile(x) {
 }
 
 checkMobile(x);
-
-
