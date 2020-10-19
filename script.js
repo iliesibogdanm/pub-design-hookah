@@ -32,8 +32,8 @@ function openMenu(evt, menuName) {
 
   const options={
     root: null,//it is the viewport
-    threshhold: 0.5,
-    rootMargin: "-300px"
+    threshhold: 0.2,
+    rootMargin: "-400px"
   };
   const options2={
     root: null,//it is the viewport
@@ -42,7 +42,8 @@ function openMenu(evt, menuName) {
   };
   const mobileOptions={
     root: null,//it is the viewport
-    threshhold: 0.4,
+    threshhold: 0.5,
+    rootMargin: "300px"
   };
 const dissapearOnScroolL = new IntersectionObserver(function(entries,dissapearOnScroolL)
 {
@@ -51,7 +52,7 @@ const dissapearOnScroolL = new IntersectionObserver(function(entries,dissapearOn
       return;
     } else {
       entry.target.classList.add('left-animation');
-      dissapearOnScrool.unobserve(entry.target);
+      dissapearOnScroolL.unobserve(entry.target);
     }
   })
 },options);
@@ -63,7 +64,7 @@ const dissapearOnScroolR = new IntersectionObserver(function(entries,dissapearOn
       return;
     } else {
       entry.target.classList.add('right-animation');
-      dissapearOnScrool.unobserve(entry.target);
+      dissapearOnScroolR.unobserve(entry.target);
     }
   })
 },options);
@@ -75,7 +76,7 @@ const showTab = new IntersectionObserver(function(entries,showTab)
       return;
     } else {
       entry.target.classList.add('appear');
-      dissapearOnScrool.unobserve(entry.target);
+      showTab.unobserve(entry.target);
     }
   })
 },options2);
@@ -86,8 +87,8 @@ const dissapearOnScroolRM = new IntersectionObserver(function(entries,dissapearO
     if(!entry.isIntersecting){
       return;
     } else {
-      entry.target.classList.add('right-animation');
-      dissapearOnScrool.unobserve(entry.target);
+      entry.target.classList.add('right-animation-mobile');
+      dissapearOnScroolRM.unobserve(entry.target);
     }
   })
 },mobileOptions);
@@ -97,8 +98,8 @@ const dissapearOnScroolLM = new IntersectionObserver(function(entries,dissapearO
     if(!entry.isIntersecting){
       return;
     } else {
-      entry.target.classList.add('left-animation');
-      dissapearOnScrool.unobserve(entry.target);
+      entry.target.classList.add('left-animation-mobile');
+      dissapearOnScroolLM.unobserve(entry.target);
     }
   })
 },mobileOptions);
@@ -109,12 +110,13 @@ function checkMobile(x) {
     dissapearOnScroolLM.observe(leftAnimation);
     dissapearOnScroolRM.observe(rightAnimation);
     showTab.observe(menuTab);
-  } else {
+  } else{
     dissapearOnScroolL.observe(leftAnimation);
     dissapearOnScroolR.observe(rightAnimation);
     showTab.observe(menuTab);
   }
 }
-  checkMobile(x);
+
+checkMobile(x);
 
 

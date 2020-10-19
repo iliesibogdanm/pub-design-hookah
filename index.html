@@ -15,18 +15,21 @@
 
         <!--Intro section-->
         <section class="section-default" id="landing">
-            <video autoplay muted loop class="video" src="/assets/background-video.mp4"></video>
-            <div class="lading-container">
+            <video id="video_background" autoplay muted loop class="video" src="/assets/background-video.mp4"></video>
+            <div class="lading-container lax" data-lax-translate-y_small="0 0,400 200"
+                                         data-lax-translate-y_large="0 0,600 400">
                 <div><h1>Shishara</h1></div>
                 <div><h3>Hookah from another century</h3></div>
             </div>
-            <div class="sub-icons">
+            <div class="sub-icons lax"  data-lax-opacity="0 1,200 0">
                 <a href="https://www.facebook.com/"><img src="assets/facebook.png" alt="" width="70px"></a>
                 <a href="https://www.instagram.com/"><img src="assets/instagram.png" alt="" width="70px"></a>
             </div>
             <div class="img">
-                <img class="big-hookah" src="/assets/hooka-2.2.png" alt=""> 
-                <img class="logo" src="/assets/hookah logo.svg" alt="">
+                <img class="big-hookah lax" data-lax-translate-y_small="0 0,200 800"
+                                       data-lax-translate-y_large="0 0,500 800"
+                                       data-lax-translate-x_large="0 0,500 -600" src="/assets/hooka-2.2.png" alt=""> 
+                <img class="logo lax" data-lax-translate-y_large="0 0,600 400" src="/assets/hookah logo.svg" alt="">
             </div>
         </section>
         <div class="smoke-separator">
@@ -38,18 +41,18 @@
             <div class="about-us-grid-container">
                 <div class="about-us">
                     <h1>Cine suntem?</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. mauris est malesuada lacus. Fusce pulvinar venenatis diam, </p>
+                    <p class="faders">Lorem ipsum dolor sit amet, consectetur adipiscing elit. mauris est malesuada lacus. Fusce pulvinar venenatis diam, </p>
                 </div>
                 <div class="about-us-pics">
-                    <img class="pic1" id="f1" src="assets/7.jpg"alt="">
-                    <img class="pic2" id="2" src="assets/4.jpg" alt="">
-                    <img class="pic3" id="3" src="assets/1.jpg" alt="">
-                    <img class="pic4" id="4" src="assets/8.jpg" alt="">
-                    <img class="pic5" id="5" src="assets/9.jpg" alt="">
+                    <img class="pic1 lax" id="1" data-lax-translate-y_small="0 -1000,600 1" data-lax-translate-y_large="0 -1000,200 -800,600 1" src="assets/7.jpg"alt="">
+                    <img class="pic2 lax" id="2" data-lax-translate-y_small="0 -500,400 1" data-lax-translate-y_large="0 -800,800 1" src="assets/4.jpg" alt="">
+                    <img class="pic3 lax" id="3" data-lax-translate-y_small="0 -500,400 1" data-lax-translate-y_large="0 -500,700 1" src="assets/1.jpg" alt="">
+                    <img class="pic4 lax" id="4" data-lax-translate-y_small="0 -900,500 1" data-lax-translate-y_large="0 -1500,650 1" src="assets/8.jpg" alt="">
+                    <img class="pic5 lax" id="5" data-lax-translate-y_small="0 -1000,900 1" data-lax-translate-y_large="0 -1200,600 1" src="assets/9.jpg" alt="">
                 </div>
                 <div class="about-us-pics2">
-                    <img class="pic6" id="f1" src="assets/5.jpg"alt="">
-                    <img class="pic7" id="2" src="assets/6.jpg" alt="">
+                    <img class="pic6 lax" id="6" src="assets/5.jpg" data-lax-translate-y_small="0 1000,600 1"alt="">
+                    <img class="pic7 lax" id="7" src="assets/6.jpg" data-lax-translate-y_small="0 1200,500 1"alt="">
                 </div>
             </div>
         </section>
@@ -57,11 +60,11 @@
 
         <!--Why choose us section-->
         <section class="section-default" id="why-us">
-            <div class="why-us-header"><h1>De ce sa alegi Shishara?</h1></div>
+            <div class="why-us-header"><h1 class="lax" data-lax-preset="fadeIn" >De ce sa alegi Shishara?</h1></div>
             <div class="why-us-content">
-                <div><img src="assets/hookaj icon.png" width="200px" alt=""><p>Folosim doar aroma premium si vase ceramice de cea mai inalta calitate</p></div>
-                <div><img src="assets/tea icon.png" width="200px" alt=""><p>Ceai infuzabil cu arome traditionale dar si orientale‍</p></div>
-                <div><img src="assets/teamwork icon.png" width="200px" alt=""><p>O echipa tanara si profesionala care aspira spre o servire de cea mai inalta calitate</p></div>
+                <div><img src="assets/hookaj icon.png" width="200px" alt=""><p class="faders">Folosim doar aroma premium si vase ceramice de cea mai inalta calitate</p></div>
+                <div><img src="assets/tea icon.png" width="200px" alt=""><p class="faders">Ceai infuzabil cu arome traditionale dar si orientale‍</p></div>
+                <div><img src="assets/teamwork icon.png" width="200px" alt=""><p class="faders">O echipa tanara si profesionala care aspira spre o servire de cea mai inalta calitate</p></div>
             </div>
         </section >
         <div class="smoke-separator">
@@ -82,7 +85,7 @@
               <div id="Narghila" class="tabcontent">
                   <div class="content-grid">
                   <div id="grid-element">
-                    <div>
+                    <div class="grid-element-inner">
                           <h4>Pocolo</h4>
                           <h5>Aroma</h5>
                           <p>Ghimbir & Lamaie</p>
@@ -331,6 +334,18 @@
         </section>
         <div class="smoke-separator"><img id="smoke-separator-img" src="assets/inter-section-cloud.png" alt=""></div>
     
+
+        <script src="/lax.min.js"></script>
+        <script>window.onload = function() {
+            lax.setup({breakpoints:{small:300,large:992}}) // init
+        
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+        
+            window.requestAnimationFrame(updateLax)
+        }</script>
 
     </body>
         <script src="script.js" async defer></script>
