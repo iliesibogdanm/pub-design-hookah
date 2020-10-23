@@ -134,8 +134,9 @@ body{
         object-fit: fill;
         z-index: -1;
         display: flex;
-        width: 700px;
-        height: 800px;
+        width: 800px;
+        height: 900px;
+        top: -5%;
     }
     
 
