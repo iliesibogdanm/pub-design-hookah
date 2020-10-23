@@ -277,7 +277,7 @@ body{
     .pic1{
         position: relative;
         width: 170px;
-        bottom: -580px;
+        bottom: -620px;
         left: 20px;
     }
     .pic2{
@@ -295,9 +295,9 @@ body{
     }
     .pic6{
         position: relative;
-        width: 200px;  
-        top: -250px;
-        left: 200px;   
+        width: 150px;  
+        top: -220px;
+        left: 210px;   
         border-radius: 20px;
 
     }
@@ -693,7 +693,6 @@ body{
     }
     .third div img{
         width: 100px;
-        z-index: 5;
     }
     .contact-hookah{
         width: 700px;
@@ -701,7 +700,6 @@ body{
     }
     .third h1{
         margin-bottom: 0px;
-        z-index: 10;
     }
 }
 @media only screen and (max-width:400px){
