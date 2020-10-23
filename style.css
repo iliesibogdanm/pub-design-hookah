@@ -99,6 +99,9 @@ body{
     object-fit: cover;
     z-index: -1;
 }
+#gif-background{
+    display: none;
+}
 
 @media only screen and (max-width:600px){
     .section-default#landing{
@@ -123,6 +126,19 @@ body{
     .sub-icons img{
         width: 50px;
     }
+    .video{
+        display: none;
+    }
+    #gif-background{
+        position: absolute;
+        object-fit: fill;
+        z-index: -1;
+        display: flex;
+        width: 700px;
+        height: 800px;
+    }
+    
+
 }
 
 /*---------------------------------------About page----------------------------------------------------*/
