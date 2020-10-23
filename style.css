@@ -377,16 +377,18 @@ body{
 .cloud-animation>.left{
     position: absolute;
     width: 2200px;
-    transition: all 3s ease-in-out;
+    transition: all 2s ease-in;
     left: -10%;
+    transition-delay: 1s;
 }
 
 .cloud-animation>.right{
     position: relative;
     width: 2200px;
-    transition: all 3s ease-in-out;
+    transition: all 2s ease-in;
     left: 10%;
     top: -100px;
+    transition-delay: 1s;
 }
 
 .tab{
@@ -668,10 +670,17 @@ body{
         grid-template-areas:"first"
         "second"
         "third";
-        margin-top: 50px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    .first div img{
+        width: 50px;
+    }
+    .second div img{
+        width: 50px;
     }
     .third div img{
-        width: 150px;
+        width: 100px;
     }
     .contact-hookah{
         width: 700px;

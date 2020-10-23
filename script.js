@@ -50,7 +50,7 @@ function openMenu(evt, menuName) {
   const mobileOptions={
     root: null,//it is the viewport
     threshhold: 0.5,
-    rootMargin: "300px"
+    rootMargin: "500px"
   };
 const dissapearOnScroolL = new IntersectionObserver(function(entries,dissapearOnScroolL)
 {
