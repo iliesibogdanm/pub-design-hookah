@@ -50,6 +50,7 @@ body{
     position: relative;
     bottom: -150px;
 }
+
 .section-default>.img{
     position: absolute;
     display: flex;
@@ -64,13 +65,16 @@ body{
 .section-default>.img>.logo{
     position: relative;
     width: 200px;
-    left: -700px;
-    top: -160px;
+    left: -680px;
+    top: -185px;
 }
 .lading-container h1{
-    font-size: 80px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 120px;
     margin:0;
-    padding: 20px 20px 0px 20px;
+    padding:20px 20px 0px 20px;
+    text-align: center;
+    margin-bottom: -25px;
 }
 .lading-container h3{
     font-size: 20px;
@@ -109,11 +113,13 @@ body{
         height: 100vh;
     }
     .lading-container h1{
-        font-size: 45px;
+        font-size: 85px;
         text-align: center;
+        padding-bottom: 20px;
     }
     .lading-container h3{
         font-size:15px;
+        margin-bottom: 0px;
     }
     .section-default>.img>.logo{
         width: 100px;
@@ -121,7 +127,7 @@ body{
         left: -690px;
     }
     .section-default>.img>.big-hookah{
-        right: 5%;
+        right: 10%;
     }
     .sub-icons img{
         width: 50px;
@@ -241,7 +247,10 @@ body{
           "about-us"
           "pics-two";
     }
-    .about-us{grid-area: about-us;}
+    .about-us{
+        grid-area: about-us;
+        margin-top: 30px;
+    }
     .about-us>h1{
         margin: 0;
         margin-left: 40px;
@@ -266,10 +275,16 @@ body{
         bottom: 0;
     }
     .pic1{
+        position: relative;
         width: 170px;
+        bottom: -580px;
+        left: 20px;
     }
     .pic2{
+        position: relative;
         width: 250px;
+        bottom: -450px;
+        left: 140px;
 
     }
     .pic4{
@@ -279,15 +294,12 @@ body{
         display: none;
     }
     .pic6{
-        position:absolute;
-        width: 200px;     
-        right: 50%;
-        bottom: 10%;
-    }
-    .pic7{
-        position:absolute;
-        width: 150px;    
-        right: 0;
+        position: relative;
+        width: 200px;  
+        top: -250px;
+        left: 200px;   
+        border-radius: 20px;
+
     }
 }
 
@@ -681,6 +693,7 @@ body{
     }
     .third div img{
         width: 100px;
+        z-index: 5;
     }
     .contact-hookah{
         width: 700px;
@@ -688,6 +701,7 @@ body{
     }
     .third h1{
         margin-bottom: 0px;
+        z-index: 10;
     }
 }
 @media only screen and (max-width:400px){
