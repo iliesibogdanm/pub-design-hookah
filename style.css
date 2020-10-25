@@ -102,9 +102,17 @@ body{
     position: absolute;
     object-fit: cover;
     z-index: -1;
+    display: none;
 }
 #gif-background{
     display: none;
+}
+#gif-background-reverse{
+    width: 100vw;
+    height: 120vh;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1; 
 }
 
 @media only screen and (max-width:600px){
